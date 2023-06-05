@@ -27,4 +27,4 @@ production:
   adapter: postgresql
   database: my_app_production
   username: my_app
-  password: <%= ENV["HW4"] %>
+  password: <%= ENV["KELLOGGHW"] %>
