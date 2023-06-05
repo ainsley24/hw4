@@ -1,24 +1,38 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Tacostagram Final</title>
+    <title>Homework</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
+ <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- My own CSS -->
     <link rel="stylesheet" href="/stylesheets/application.css">
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
   </head>
+
+    
+ 
 
   <body>
     <div>
       <%= flash["notice"] %>
    <p>
+   <nav class="navbar bg-primary mb-3" data-bs-theme="dark">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="/">Kwitter</a>
+        <span class="navbar-text">
   <% if @current_user %>
     <%= @current_user["first_name"] %>
-    <a href="/sessions/destroy">Logout</a> |
+    <a class="nav-link btn btn-primary" href="/sessions/destroy">Logout</a> |
   <% else %>
-    <a href="/sessions/new">Login</a> |
-    <a href="/users/new">Signup</a>
+    <a class="nav-link btn btn-primary" href="/sessions/new">Login</a> |
+    <a class="nav-link btn btn-primary" href="/users/new">Signup</a>
   <% end %>
 </p>
 
