@@ -28,17 +28,17 @@
         <span class="navbar-text">
   <% if @current_user %>
     <%= @current_user["username"] %>
-    <a class="nav-link btn btn-primary" href="/sessions/destroy">Logout</a> |
+    <a class="nav-link btn btn-primary mt-3 mb-3" href="/logout">Logout</a> |
   <% else %>
-    <a class="nav-link btn btn-primary" href="/sessions/new">Login</a> |
-    <a class="nav-link btn btn-primary" href="/users/new">Signup</a>
+    <a class="nav-link btn btn-primary mt-3 mb-3" href="/login">Login</a> |
+    <a class="nav-link btn btn-primary mt-3 mb-3" href="/users/new">Signup</a>
   <% end %>
   </span>
   </div>
 </nav>
 
 <div class="container mt-3">
-    <div class="row">
+    <div class="row mt-5">
       <div class="col text-center">
         <%= flash["notice"] %>
       </div>
