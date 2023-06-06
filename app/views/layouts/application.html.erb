@@ -22,7 +22,8 @@
   <body>
     <div>
       <%= flash["notice"] %>
-   <p>
+      </div>
+
    <nav class="navbar bg-primary mb-3" data-bs-theme="dark">
       <div class="container-fluid">
         <a class="navbar-brand" href="/">Home</a>
@@ -34,7 +35,9 @@
     <a class="nav-link btn btn-primary" href="/sessions/new">Login</a> |
     <a class="nav-link btn btn-primary" href="/users/new">Signup</a>
   <% end %>
-</p>
+  </span>
+  </div>
+</nav>
 
     <%= yield %>
   </body>
